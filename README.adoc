@@ -1,6 +1,6 @@
 = EFREIRoids
 
-Clone simplifié du jeu Asteroids, développé en C++ avec SDL3 dans le cadre du cours de POO à l'EFREI.
+Jeu Asteroids, développé en C++ avec SDL3 dans le cadre du cours de POO à l'EFREI.
 
 == Compilation
 
