@@ -1,0 +1,24 @@
+== Installer les dépendances SDL3 sur Unix
+
+Pour installer les dépendances SDL3 nécessaires au projet sur une distribution Linux basée sur Debian (comme Ubuntu), vous pouvez utiliser la commande suivante dans votre terminal :
+
+[source,bash]
+----
+sudo apt-get install libsdl3-dev libsdl3-image-dev libsdl3-mixer-dev
+----
+
+Pour les distributions basées sur Red Hat (comme Fedora), utilisez la commande suivante :
+
+[source,bash]
+----
+sudo dnf install SDL3-devel SDL3_image-devel SDL3_mixer-devel
+----
+
+MacOs
+
+[source,bash]
+----
+brew install sdl3
+----
+
+Si vous ne trouvez pas votre distribution ou que vous ne parvenez pas à faire fonctionner la SDL3, essayez la méthode pour Windows (git submodule).

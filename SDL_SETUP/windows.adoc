@@ -1,0 +1,8 @@
+= Installer SDL3 sur Windows
+
+Pour configurer la SDL3 sur Windows, suivez les étapes ci-dessous :
+
+[source,cmd]
+----
+git submodule update --init --recursive
+----

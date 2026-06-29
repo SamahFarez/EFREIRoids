@@ -1,0 +1,63 @@
+= EFREIRoids
+
+Clone simplifié du jeu Asteroids, développé en C++ avec SDL3 dans le cadre du cours de POO à l'EFREI.
+
+== Compilation
+
+Prérequis : `cmake`, `make`, et la bibliothèque SDL3 installée.
+
+[source,bash]
+----
+cd project
+mkdir build && cd build
+cmake ..
+make
+----
+
+== Lancement
+
+[source,bash]
+----
+cd project/build/bin
+./asteroid
+----
+
+Le jeu doit être lancé depuis le dossier `bin/` car les ressources graphiques s'y trouvent.
+
+== Contrôles
+
+[cols="1,2"]
+|===
+| Touche | Action
+
+| ↑
+| Accélérer (poussée motrice vers l'avant)
+
+| ↓
+| Freiner (poussée en sens inverse)
+
+| ← / →
+| Faire pivoter le vaisseau
+
+| Espace
+| Tirer un missile
+
+| Échap
+| Quitter le jeu
+|===
+
+== Règles du jeu
+
+* Détruire tous les astéroïdes pour gagner.
+* Tirer sur un astéroïde le divise en deux plus petits. Le toucher une seconde fois le détruit complètement.
+* Chaque collision avec un astéroïde réduit le niveau de bouclier du vaisseau (4 touches avant destruction).
+* Après une collision, le vaisseau devient brièvement invincible.
+* Le vaisseau et les astéroïdes réapparaissent de l'autre côté lorsqu'ils sortent de l'écran.
+* Un seul missile peut être présent à l'écran à la fois.
+
+== Différences avec les consignes validées en classe
+
+* Le vaisseau décélère progressivement lorsqu'aucune touche n'est pressée (légère friction), pour faciliter la prise en main. Le principe d'inertie est conservé : relâcher les touches ne stoppe pas le vaisseau instantanément.
+* Une ligne de visée en pointillés indique la direction du prochain tir.
+* Un HUD affiche le niveau de bouclier (barre colorée) et le score en haut à gauche.
+* Un écran de fin semi-transparent s'affiche pendant 3 secondes avant la fermeture du jeu.
